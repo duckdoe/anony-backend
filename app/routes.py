@@ -71,10 +71,8 @@ def signup():
 def login():
     if request.is_json:
         data = request.get_json()
-        print(data)
         username = data.get("username")
         password = data.get("password")
-        print(username, password)
 
         if not all([username, password]):
             return jsonify({"error": "Missing fields in payload"}), 400
