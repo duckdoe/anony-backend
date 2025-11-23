@@ -33,7 +33,8 @@ def create_table():
                 CREATE TABLE IF NOT EXISTS messages(
                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
                     user_id UUID REFERENCES users(id) NOT NULL,
-                    message TEXT NOT NULL
+                    message TEXT NOT NULL,
+                    created_at TIMESTAMP WITH TIMEZONE DEFAULT now()
                 );
                 """
         )
