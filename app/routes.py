@@ -110,7 +110,7 @@ def messages():
 
     user = get_user(username=username)
     if not user:
-        return jsonify({"error": "user not found"}), 404
+        return jsonify({"error": "user not found", "user_id": user.get("id")}), 404
 
     bearer_token = request.headers.get("Authorization")
     if not bearer_token:
