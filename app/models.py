@@ -34,7 +34,7 @@ def create_table():
                     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
                     user_id UUID REFERENCES users(id) NOT NULL,
                     message TEXT NOT NULL,
-                    created_at TIMESTAMP WITH TIMEZONE DEFAULT now()
+                    created_at TIMESTAMP WITH TIME ZONE DEFAULT now()
                 );
                 """
         )
