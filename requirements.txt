@@ -6,6 +6,7 @@ click==8.3.0
 colorama==0.4.6
 dotenv==0.9.9
 Flask==3.1.2
+flask_cors==6.0.1
 gunicorn==23.0.0
 idna==3.11
 itsdangerous==2.2.0
